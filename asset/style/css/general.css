@@ -1,515 +1,86 @@
-/*-------------------------------- RESET --------------------------------*/
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  margin: auto;
-  --pink: #ff20ab;
-  --blue: #21b4dc; }
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit; }
-
-body {
-  margin: 0 auto;
-  background-color: black;
-  max-width: 1903px; }
-
-h1,
-h2,
-h3,
-p,
-ul {
-  margin: 0px;
-  padding: 0px; }
-
-a,
-p,
-li {
-  text-decoration: none;
-  list-style: none;
-  font-family: "Raleway", sans-serif; }
-
-button {
-  color: white;
-  border-color: transparent;
-  margin: 0;
-  padding: 0;
-  overflow: visible;
-  outline: none;
-  background: transparent;
-  font-family: "Raleway", sans-serif; }
-
-button:hover {
-  cursor: pointer; }
-
-/*-------------------------------- POLICES--------------------------------*/
-@font-face {
-  font-family: "VampiroOne";
-  src: url("../font/vampiro_one/VampiroOne-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: "Raleway";
-  src: url("../font/raleway/static/Raleway-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: "Raleway";
-  src: url("../font/raleway/static/Raleway-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
-/*-------------------------------- BANQUE IMAGE SVG --------------------------------*/
-.svg-stock {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden; }
-
-/*-------------------------------- HEADER --------------------------------*/
-.header-site {
-  background-color: var(--pink);
-  display: grid;
-  grid-template-areas: "burger-menu logo" "nav-site nav-site";
-  align-items: center; }
-
-.header-site h1 {
-  font-family: "VampiroOne", sans-serif;
-  font-size: 3rem;
-  color: white;
-  margin: 10px 0;
-  grid-area: logo; }
-
-/*----------------- Menu Burger------------------ */
-.burger-menu {
-  grid-area: burger-menu;
-  justify-self: center; }
-
-.nav-burger {
-  top: 91px;
-  left: 0px;
-  width: 100%;
-  height: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: height 0.6s ease-out;
-  background: linear-gradient(180deg, #21b5de 0%, #ff1fa9 100%);
-  overflow: hidden;
-  position: absolute;
-  z-index: 1; }
-
-.burger-favorites-channel-container {
-  border-top: 1px solid black; }
-
-.burger-favorites-channel-container h2 {
-  font-family: "Raleway", sans-serif;
-  color: white;
-  font-size: 1.8rem;
-  margin-top: 20px;
-  text-align: center; }
-
-.nav-burger .icon-burger {
-  fill: black; }
-
-.nav-link-icon {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  text-align: center; }
-
-.nav-link-icon a {
-  text-decoration: none;
-  margin-bottom: 30px;
-  font-size: 24px;
-  color: black; }
-
-.navicon {
-  background: white;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background 0.2s ease-out;
-  width: 18px; }
-
-.navicon:before {
-  background: white;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%; }
-
-.navicon:after {
-  background: white;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%; }
-
-.navicon:before {
-  top: 5px; }
-
-.navicon:after {
-  top: -5px; }
-
-.menu-btn {
-  display: none; }
-
-.menu-icon:hover {
-  cursor: pointer; }
-
-.burger-menu .menu-btn:checked ~ .nav-burger {
-  height: 100vh; }
-
-.burger-menu .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent; }
-
-.burger-menu .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg); }
-
-.burger-menu .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg); }
-
-.burger-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.burger-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0; }
-
-/*----------------- Fin Menu Burger ------------------ */
-.nav-site {
-  grid-area: nav-site; }
-
-.nav-site-container {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 10px; }
-
-.nav-site-links a {
-  display: flex;
-  align-items: center;
-  color: white;
-  font-size: 2rem;
-  margin-left: 12px; }
-
-.nav-site-links:hover > a .icon-nav {
-  color: black;
-  fill: black; }
-
-.nav-site-links:hover > a {
-  color: black; }
-
-.icon-nav {
-  margin-right: 15px; }
-
-.icon {
-  display: inline-block;
-  width: 2.4rem;
-  height: 2.4rem;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: white; }
-
-.nav-site-inscription {
-  display: none; }
-
-/* ------------------- RESPONSIVE ------------------- */
-@media (min-width: 1024px) {
-  .header-site {
-    display: flex;
-    align-items: center; }
-
-  .header-site h1 {
-    position: relative;
-    left: 264px;
-    transform: translateX(-110%); }
-
-  .nav-site {
-    margin-left: 106px;
-    width: 100%; }
-
-  .nav-site-container {
-    display: grid;
-    grid-template-columns: auto auto 1fr;
-    grid-gap: 80px;
-    margin-bottom: 0; }
-
-  .nav-site-inscription {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5%; }
-
-  .user-button {
-    background-color: white;
-    color: black;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 1.6rem;
-    transition: 0.3s; }
-
-  .login-button {
-    margin-right: 20px; }
-
-  .login-button:hover {
-    background-color: black;
-    color: white; }
-
-  .register-button {
-    background-color: var(--blue);
-    color: white; }
-
-  .register-button:hover {
-    background-color: black; } }
-/*-------------------------------- PAGE D'ACCUEIL SITE --------------------------------*/
-.main-wrapper-site {
-  margin: 0 5%; }
-
-.favorites-channel-container {
-  background: linear-gradient(180deg, #21b5de 0%, #ff1fa9 100%);
-  grid-area: aside;
-  display: none; }
-
-.main-wrapper-site .favorites-channel-container h2 {
-  color: white;
-  display: flex;
-  align-items: center; }
-
-.icon-star-full {
-  margin-right: 1.5rem; }
-
-.main-wrapper-site h2 {
-  font-family: "Raleway", sans-serif;
-  font-size: 1.8rem;
-  color: var(--blue);
-  margin-top: 40px;
-  text-align: center; }
-
-.channel-card {
-  margin-top: 40px; }
-
-.channel-picture {
-  background-color: white;
-  border: 2px solid var(--blue);
-  width: 100%;
-  max-width: 350px;
-  height: 250px; }
-
-.channel-informations {
-  margin-top: 15px;
-  display: flex;
-  align-items: center; }
-
-.channel-user-picture {
-  width: 36px;
-  height: 36px;
-  background-color: var(--pink);
-  border: 2px solid var(--blue);
-  border-radius: 50%; }
-
-.channel-names {
-  color: var(--blue);
-  margin-left: 15px; }
-
-.channel-names li:first-child {
-  margin-bottom: 10px; }
-
-/* ------------------- RESPONSIVE ------------------- */
-@media (min-width: 389px) {
-  .channel-picture {
-    width: 350px; }
-
-  .channel-card {
-    width: max-content;
-    margin: auto;
-    margin-top: 40px; } }
-@media (min-width: 768px) {
-  .channel-container {
-    display: grid; }
-
-  .channel-card-container {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, 350px);
-    column-gap: 36px; }
-
-  .channel-container-title {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 350px);
-    column-gap: 36px;
-    justify-content: center; }
-
-  .main-wrapper-site h2 {
-    grid-column: 1 / 3;
-    text-align: left; } }
-@media (min-width: 1024px) {
-  .burger-menu {
-    display: none; }
-
-  .main-wrapper-index {
-    margin: auto;
-    display: grid;
-    grid-template-areas: "aside recent-channel" "aside like-channel";
-    grid-template-columns: 264px 1fr; }
-
-  .favorites-channel-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; }
-
-  .recent-channel-container {
-    grid-area: recent-channel; }
-
-  .like-channel-container {
-    grid-area: like-channel; } }
-/*-------------------------------- PAGE INSCRIPTION / LOGIN --------------------------------*/
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.form-container form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  margin-top: 40px; }
-
-.form-container form label {
-  color: var(--blue);
-  font-family: "Raleway", sans-serif;
-  font-size: 1.4rem; }
-
-.form-container form input,
-.form-container form select {
-  font-family: "Raleway", sans-serif;
-  font-size: 1.2rem;
-  margin: 15px 0;
-  height: 40px; }
-
-/*-------------------------------- PAGE INSCRIPTION / LOGIN --------------------------------*/
-.user-titles {
-  display: flex; }
-
-.user-titles h2:first-child {
-  margin-right: 40px; }
-
-.user-titles a {
-  color: var(--blue); }
-
-.user-titles a:hover {
-  border-bottom: var(--blue) 2px solid;
-  padding-bottom: 5px; }
-
-.profil-picture-container {
-  display: flex;
-  margin-top: 15px; }
-
-.preview-image {
-  height: 48px;
-  width: 48px;
-  background-color: white;
-  color: white;
-  border-radius: 50%;
-  border: 2px solid var(--blue);
-  margin-right: 10px; }
-
-/*-------------------------------- PAGE CHANNEL --------------------------------*/
-.channel-user-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.channel-titles {
-  display: flex; }
-
-.channel-titles h2:first-child {
-  margin-right: 40px; }
-
-.channel-titles a {
-  color: var(--blue); }
-
-.channel-titles a:hover {
-  border-bottom: var(--blue) 2px solid;
-  padding-bottom: 5px; }
-
-.channel-card-user {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px; }
-
-.channel-informations-user {
-  margin-top: 0; }
-
-.channel-picture-container {
-  display: flex;
-  justify-content: center;
-  width: 100%; }
-
-.channel-chat {
-  display: flex;
-  margin-top: 40px;
-  max-width: 350px;
-  height: 350px;
-  background-color: white;
-  align-items: flex-end; }
-
-.channel-chat-sending {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 10px 0; }
-
-.channel-chat-sending input {
-  width: 80%; }
-
-.button-channel-chat {
-  color: black; }
-
-.channel-options {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-  width: 100%;
-  max-width: 450px; }
-
-.button-channel-options {
-  color: var(--blue);
-  font-size: 1.8rem;
-  padding: 5px; }
-
-.button-channel-options:hover {
-  border-bottom: var(--blue) 2px solid; }
-
-/* ------------------- RESPONSIVE ------------------- */
-@media (min-width: 768px) {
-  .channel-user-container-one {
-    display: grid;
-    grid-template-areas: "channel-titles channel-titles" "channel-card-user channel-card-user" "channel-picture channel-chat";
-    grid-gap: 50px; }
-
-  .channel-titles {
-    grid-area: channel-titles; }
-
-  .channel-card-user {
-    grid-area: channel-card-user;
-    margin: 0; }
-
-  .channel-picture-container {
-    grid-area: channel-picture; }
-
-  .channel-chat {
-    grid-area: channel-chat;
-    margin-top: 0; } }
-@media (min-width: 1024px) {
-  .channel-picture-container img {
-    max-width: 770px;
-    width: 770px;
-    height: 485px; }
-
-  .channel-chat {
-    height: 485px; } }
-
-/*# sourceMappingURL=general.css.map */
+/*
+Error: An @import loop has been found:
+           D:\HETIC\Cours\perfectionnement_tech\lumikastream_front\asset\style\scss\general.scss imports D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/channel.scss
+           D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/channel.scss imports D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/general.scss
+           D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/general.scss imports D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/channel.scss
+        on line 99 of D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/general.scss
+        from line 1 of D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/channel.scss
+        from line 99 of D:\HETIC\Cours\perfectionnement_tech\lumikastream_front\asset\style\scss\general.scss
+
+94: 
+95: @import "index";
+96: 
+97: /*-------------------------------- PAGE CHANNEL --------------------------------*\/
+98: 
+99: @import "channel";
+100: 
+101: /*-------------------------------- PAGE INSCRIPTION / LOGIN --------------------------------*\/
+102: 
+103: @import "form";
+104: 
+
+Backtrace:
+D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/general.scss:99
+D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/channel.scss:1
+D:\HETIC\Cours\perfectionnement_tech\lumikastream_front\asset\style\scss\general.scss:99
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:574:in `handle_import_loop!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: An @import loop has been found:\A            D:\HETIC\Cours\perfectionnement_tech\lumikastream_front\asset\style\scss\general.scss imports D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/channel.scss\A            D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/channel.scss imports D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/general.scss\A            D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/general.scss imports D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/channel.scss\A         on line 99 of D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/general.scss\A         from line 1 of D:/HETIC/Cours/perfectionnement_tech/lumikastream_front/asset/style/scss/channel.scss\A         from line 99 of D:\HETIC\Cours\perfectionnement_tech\lumikastream_front\asset\style\scss\general.scss\A \A 94: \A 95: @import \"index\";\A 96: \A 97: /*-------------------------------- PAGE CHANNEL --------------------------------*/\A 98: \A 99: @import \"channel\";\A 100: \A 101: /*-------------------------------- PAGE INSCRIPTION / LOGIN --------------------------------*/\A 102: \A 103: @import \"form\";\A 104: "; }

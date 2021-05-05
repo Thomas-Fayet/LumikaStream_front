@@ -1,43 +1,38 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
+  align-items: center; }
 
 .form-container form {
   display: flex;
   flex-direction: column;
   width: 300px;
-  margin-top: 40px;
-}
+  margin-top: 40px; }
 
 .form-container form label {
   color: var(--blue);
   font-family: "Raleway", sans-serif;
-  font-size: 1.4rem;
-}
+  font-size: 1.4rem; }
 
 .form-container form input,
 .form-container form select {
   font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
   margin: 15px 0;
-  height: 40px;
-}
+  height: 40px; }
 
 .form-submit-button {
   border-radius: 15px;
   border: solid 2px var(--pink);
   background-color: transparent;
-  color: white;
-}
+  color: white; }
 
 .form-submit-button:hover {
-  background: linear-gradient(147deg, rgba(33,180,220,1) 30%, rgba(255,32,171,1) 70%);
+  background: linear-gradient(147deg, #21b4dc 30%, #ff20ab 70%);
   border-color: black;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 input[type=file] {
-  color: white;
-}
+  color: white; }
+
+/*# sourceMappingURL=form.css.map */

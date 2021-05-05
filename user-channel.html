@@ -68,39 +68,43 @@
       </nav>
     </header>
 
-    <main class="main-wrapper-site main-wrapper-form">
-      <section class="form-container">
-        <h2 class="form-title">INSCRIPTION</h2>
-        
-        <form action="" method="post">
-            <label for="pseudo">Pseudo</label>
-            <input type="text" name="pseudo" id="pseudo" required>
-            <label for="gender">Civilité</label>
-            <select name="gender" id="gender">
-                <option value="monsieur">Monsieur</option>
-                <option value="madame">Madame</option>
-                <option value="autre">Autre</option>
-            </select>
-            <label for="name">Nom</label>
-            <input type="text" name="name" id="name" required>
-            <label for="firstName">Prénom</label>
-            <input type="text" name="firstName" id="firstName" required>
-            <label for="address">Adresse</label>
-            <input type="text" name="address" id="address" required>
-            <label for="postalCode">Code postal</label>
-            <input type="number" name="postalCode" id="postalCode" required>
-            <label for="city">Ville</label>
-            <input type="text" name="city" id="city" required>
-            <label for="phone">Numéro de téléphone</label>
-            <input type="text" name="phone" id="phone" required>
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" required>
-            <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password" required>
-            <label for="confirmPassword">Confirmation de mot de passe</label>
-            <input type="password" name="confirmPassword" id="confirmPassword" required>
-            <input class="form-submit-button" type="submit" value="Envoyer" name="envoyer">
-        </form>
+    <main class="main-wrapper-site main-wrapper-channel">
+      <section class="user-container channel-user-container">
+          <div class="channel-user-container-one">
+              <div class="channel-titles">
+                  <h2><a href="user.html">Mon Profil</a></h2>
+                  <h2>Ma Chaîne</h2>
+                </div>
+              
+              <div class="channel-card channel-card-user">
+                <img id="user-image" class="preview-image" src="" alt="">
+      
+                <div class="channel-informations channel-informations-user">
+                  <ul class="channel-names">
+                    <li class="channel-name">Nom du stream</li>
+                    <li class="channel-user-name">Nom de l'utilisateur</li>
+                  </ul>
+                </div>
+              </div>
+      
+              <div class="channel-picture-container">
+                  <img src="" alt="" class="channel-picture" />
+              </div>
+              
+      
+              <div class="channel-chat">
+                <div class="channel-chat-sending">
+                  <input type="text" name="sending-message" id="sending-message" placeholder="Envoyer un message...">
+                  <button class="button-channel-chat" type="submit">--></button>
+                </div>
+              </div>
+          </div>
+
+        <div class="channel-options">
+          <button class="button-channel-options" type="button">About</button>
+          <button class="button-channel-options" type="button">Setup</button>
+          <button class="button-channel-options" type="button">Mes réseaux</button>
+        </div>
       </section>
     </main>
     <script src="asset/script/script.js"></script>

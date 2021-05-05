@@ -311,7 +311,8 @@ button:hover {
 
 .channel-names {
   color: var(--blue);
-  margin-left: 15px; }
+  margin-left: 15px;
+  font-size: 1.4rem; }
 
 .channel-names li:first-child {
   margin-bottom: 10px; }
@@ -364,6 +365,7 @@ button:hover {
 
   .like-channel-container {
     grid-area: like-channel; } }
+/*-------------------------------- PAGE CHANNEL --------------------------------*/
 /*-------------------------------- PAGE INSCRIPTION / LOGIN --------------------------------*/
 .form-container {
   display: flex;
@@ -387,6 +389,20 @@ button:hover {
   font-size: 1.2rem;
   margin: 15px 0;
   height: 40px; }
+
+.form-submit-button {
+  border-radius: 15px;
+  border: solid 2px var(--pink);
+  background-color: transparent;
+  color: white; }
+
+.form-submit-button:hover {
+  background: linear-gradient(147deg, #21b4dc 30%, #ff20ab 70%);
+  border-color: black;
+  cursor: pointer; }
+
+input[type=file] {
+  color: white; }
 
 /*-------------------------------- PAGE INSCRIPTION / LOGIN --------------------------------*/
 .user-titles {
@@ -415,7 +431,7 @@ button:hover {
   border: 2px solid var(--blue);
   margin-right: 10px; }
 
-/*-------------------------------- PAGE CHANNEL --------------------------------*/
+/*-------------------------------- PAGE USER-CHANNEL --------------------------------*/
 .channel-user-container {
   display: flex;
   flex-direction: column;
