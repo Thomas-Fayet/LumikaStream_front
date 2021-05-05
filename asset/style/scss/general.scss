@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+/*-------------------------------- RESET --------------------------------*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  margin: auto;
+  --pink: #ff20ab;
+  --blue: #21b4dc;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  background-color: black;
+  max-width: 1903px;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+a,
+p,
+li {
+  text-decoration: none;
+  list-style: none;
+  font-family: "Raleway", sans-serif;
+}
+
+button {
+  color: white;
+  border-color: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  outline: none;
+  background: transparent;
+  font-family: "Raleway", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/*-------------------------------- POLICES--------------------------------*/
+
+@font-face {
+  font-family: "VampiroOne";
+  src: url("../font/vampiro_one/VampiroOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../font/raleway/static/Raleway-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../font/raleway/static/Raleway-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*-------------------------------- BANQUE IMAGE SVG --------------------------------*/
+
+.svg-stock {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/*-------------------------------- HEADER --------------------------------*/
+
+@import "header";
+
+/*-------------------------------- PAGE D'ACCUEIL SITE --------------------------------*/
+
+@import "index";
+
+/*-------------------------------- PAGE INSCRIPTION / LOGIN --------------------------------*/
+
+@import "form";
+
+/*-------------------------------- PAGE INSCRIPTION / LOGIN --------------------------------*/
+
+@import "user";
+
+/*-------------------------------- PAGE CHANNEL --------------------------------*/
+
+@import "channel";

@@ -1,0 +1,32 @@
+.user-titles {
+  display: flex;
+}
+
+.user-titles h2:first-child {
+  margin-right: 40px;
+}
+
+.user-titles a {
+  color: var(--blue);
+}
+
+.user-titles a:hover {
+  border-bottom: var(--blue) 2px solid;
+  padding-bottom: 5px;
+}
+
+.profil-picture-container {
+    display: flex;
+    margin-top: 15px;
+}
+
+.preview-image {
+  height: 48px;
+  width: 48px;
+  background-color: white;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+  margin-right: 10px;
+}
+
