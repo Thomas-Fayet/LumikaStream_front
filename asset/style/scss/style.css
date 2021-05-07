@@ -365,7 +365,6 @@ button:hover {
 
   .like-channel-container {
     grid-area: like-channel; } }
-/*-------------------------------- PAGE CHANNEL --------------------------------*/
 /*-------------------------------- PAGE INSCRIPTION / LOGIN --------------------------------*/
 .form-container {
   display: flex;
@@ -518,22 +517,9 @@ input[type=file] {
 
   .channel-chat {
     grid-area: channel-chat;
-    margin-top: 0; }
-
-  .received__message .user-chat {
-    color: #21B4DC;
-    font-weight: bold;
-    margin-right: 2px; }
-
-  .sent__message .user-chat {
-    background-color: #FF20AB;
-    padding: 3px 4px;
-    border-radius: 10px;
-    margin-right: 2px;
-    color: white;
-    font-weight: bold; } }
+    margin-top: 0; } }
 @media (min-width: 1024px) {
-  .channel-picture-container {
+  .channel-picture-container img {
     max-width: 770px;
     width: 770px;
     height: 485px; }
@@ -573,12 +559,16 @@ input[type=file] {
   width: 100%; }
 
 .channel-chat {
-  display: flex;
+  display: grid;
+  grid-template-areas: "messages" "sendingMessage";
   margin-top: 40px;
   max-width: 350px;
   height: 350px;
   background-color: white;
   align-items: flex-end; }
+
+.channel-user-container-one .channel-chat .inbox {
+  grid-area: messages; }
 
 .channel-chat-sending {
   display: flex;
@@ -626,9 +616,22 @@ input[type=file] {
 
   .channel-chat {
     grid-area: channel-chat;
-    margin-top: 0; } }
+    margin-top: 0; }
+
+  .received__message .user-chat {
+    color: #21B4DC;
+    font-weight: bold;
+    margin-right: 2px; }
+
+  .sent__message .user-chat {
+    background-color: #FF20AB;
+    padding: 3px 4px;
+    border-radius: 10px;
+    margin-right: 2px;
+    color: white;
+    font-weight: bold; } }
 @media (min-width: 1024px) {
-  .channel-picture-container img {
+  .channel-picture-container {
     max-width: 770px;
     width: 770px;
     height: 485px; }
