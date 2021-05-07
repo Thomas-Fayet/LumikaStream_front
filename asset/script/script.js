@@ -103,7 +103,7 @@ function validFileType(file) {
 
 var stream = document.getElementById('stream')
 stream.addEventListener('click', () => {
-    console.log('salut');
+    stream.style.display = "none";
     fetch("http://localhost:3000")
         .then(response => {
             if (flvjs.isSupported()) {
@@ -132,7 +132,7 @@ if (!window.closed) {
     let userName = "";
 
     var newUserConnected = (user) => {
-        userName = user || `User${Math.floor(Math.random() * 1000000)}`;
+        userName = user || `User${Math.floor(Math.random() * 1000)}`;
         socket.emit("new user", userName);
         addToUsersBox(userName);
     };
