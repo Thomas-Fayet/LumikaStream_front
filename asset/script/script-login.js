@@ -14,9 +14,6 @@ submitFormLogin.addEventListener('submit', (e) => {
         password: password.value
     }
 
-    console.log(email.value);
-    console.log(password.value);
-
     var body = JSON.stringify(dataLogin)
     var headers = { 'Content-Type': 'application/json; charset=UTF-8'};
 
@@ -37,6 +34,5 @@ submitFormLogin.addEventListener('submit', (e) => {
             } else {
                 window.alert('Email ou Mot de passe incorrect');
             }      
-        })
-        console.log(fetch);    
+        })  
 });
