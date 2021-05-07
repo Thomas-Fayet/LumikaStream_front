@@ -27,7 +27,7 @@ submitFormLogin.addEventListener('submit', (e) => {
         mode: 'cors',
     };
 
-    fetch('http://localhost:3000/users/login', myInit)
+    fetch('https://lumikastream.herokuapp.com/users/login', myInit)
         .then(response => response.json())
         .then(response => {
             if (response.userId && response.token){

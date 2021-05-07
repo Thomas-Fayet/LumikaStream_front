@@ -106,7 +106,7 @@ function validFileType(file) {
 var stream = document.getElementById('stream')
 stream.addEventListener('click', () => {
     stream.style.display = "none";
-    fetch("http://localhost:3000")
+    fetch("https://lumikastream.herokuapp.com/")
         .then(response => {
             if (flvjs.isSupported()) {
                 var videoElement = document.getElementById('videoElement');
@@ -124,7 +124,7 @@ stream.addEventListener('click', () => {
 // ---------------------------------------------- GESTION DU CHAT --------------------------------------
 
 if (!window.closed) {
-    var socket = io('http://localhost:3000');
+    var socket = io('https://lumikastream.herokuapp.com/');
     var messageForm = document.querySelector(".message_form");
     var messageBox = document.querySelector(".messages__history");
     var inboxPeople = document.querySelector(".inbox__people");

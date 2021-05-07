@@ -35,7 +35,7 @@ submitForm.addEventListener('submit', (e) => {
         mode: 'cors',
     };
 
-    fetch('http://localhost:3000/users/signup', myInit)
+    fetch('https://lumikastream.herokuapp.com/users/signup', myInit)
         .then(response => response.json())
         .then(response => {
             if (response.message){
