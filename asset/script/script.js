@@ -45,21 +45,13 @@ if (actualisation.getItem("is_reloaded")) {
 
 let btn = document.getElementById('profil-picture-btn');
 let containerPicture = document.getElementById('profil-picture-container');
-//let file = document.querySelector('input[type=file]').files;
 let preview = document.getElementById('preview-image');
-// let reader = new FileReader();
-//console.log(file);
-//console.log(file.type);
-// console.log(reader);
 
 let fileTypes = [
     'image/jpeg', 
     'image/png', 
     'image/jpg' 
 ]
-
-//btn.addEventListener("change", previewFile);
-
 
 // --------------------------------------------- GESTION DES BOUCLES / FONCTIONS / METHODES ---------------------------------------------
 
@@ -78,9 +70,6 @@ function previewFile() {
     } 
 }
 
-
-//console.log(window.URL.createObjectURL(file[0]))
-
 function validFileType(file) {
     for (let i = 0; i < fileTypes.length; i++) {
         if (file.type === fileTypes[i]) {
@@ -92,14 +81,6 @@ function validFileType(file) {
     }
 }
 
-
-// if (file) {
-//     reader.readAsDataURL(file);
-// }
-
-// reader.addEventListener("onload", () => {
-//     preview.src = reader.result;
-// })
 
 // ------------------------------------------------ GESTION DU STREAM ------------------------------/
 
