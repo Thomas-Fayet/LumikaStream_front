@@ -33,7 +33,7 @@ submitFormLogin.addEventListener('submit', (e) => {
             if (response.userId && response.token){
                 localStorage.setItem("userId", response.userId);
                 localStorage.setItem("token", response.token);
-                document.location.href = "./user.html";
+                document.location.href = "/user.html";
             } else {
                 window.alert('Email ou Mot de passe incorrect');
             }      
