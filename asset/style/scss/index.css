@@ -45,7 +45,8 @@
 
 .channel-names {
   color: var(--blue);
-  margin-left: 15px; }
+  margin-left: 15px;
+  font-size: 1.4rem; }
 
 .channel-names li:first-child {
   margin-bottom: 10px; }

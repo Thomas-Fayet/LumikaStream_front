@@ -21,4 +21,18 @@
   margin: 15px 0;
   height: 40px; }
 
+.form-submit-button {
+  border-radius: 15px;
+  border: solid 2px var(--pink);
+  background-color: transparent;
+  color: white; }
+
+.form-submit-button:hover {
+  background: linear-gradient(147deg, #21b4dc 30%, #ff20ab 70%);
+  border-color: black;
+  cursor: pointer; }
+
+input[type=file] {
+  color: white; }
+
 /*# sourceMappingURL=form.css.map */

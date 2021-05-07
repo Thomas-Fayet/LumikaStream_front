@@ -311,7 +311,8 @@ button:hover {
 
 .channel-names {
   color: var(--blue);
-  margin-left: 15px; }
+  margin-left: 15px;
+  font-size: 1.4rem; }
 
 .channel-names li:first-child {
   margin-bottom: 10px; }
@@ -364,6 +365,7 @@ button:hover {
 
   .like-channel-container {
     grid-area: like-channel; } }
+/*-------------------------------- PAGE CHANNEL --------------------------------*/
 /*-------------------------------- PAGE INSCRIPTION / LOGIN --------------------------------*/
 .form-container {
   display: flex;
@@ -387,6 +389,20 @@ button:hover {
   font-size: 1.2rem;
   margin: 15px 0;
   height: 40px; }
+
+.form-submit-button {
+  border-radius: 15px;
+  border: solid 2px var(--pink);
+  background-color: transparent;
+  color: white; }
+
+.form-submit-button:hover {
+  background: linear-gradient(147deg, #21b4dc 30%, #ff20ab 70%);
+  border-color: black;
+  cursor: pointer; }
+
+input[type=file] {
+  color: white; }
 
 /*-------------------------------- PAGE INSCRIPTION / LOGIN --------------------------------*/
 .user-titles {
@@ -415,7 +431,7 @@ button:hover {
   border: 2px solid var(--blue);
   margin-right: 10px; }
 
-/*-------------------------------- PAGE CHANNEL --------------------------------*/
+/*-------------------------------- PAGE USER-CHANNEL --------------------------------*/
 .channel-user-container {
   display: flex;
   flex-direction: column;
@@ -518,6 +534,101 @@ button:hover {
     font-weight: bold; } }
 @media (min-width: 1024px) {
   .channel-picture-container {
+    max-width: 770px;
+    width: 770px;
+    height: 485px; }
+
+  .channel-chat {
+    height: 485px; } }
+.channel-user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.channel-titles {
+  display: flex; }
+
+.channel-titles h2:first-child {
+  margin-right: 40px; }
+
+.channel-titles a {
+  color: var(--blue); }
+
+.channel-titles a:hover {
+  border-bottom: var(--blue) 2px solid;
+  padding-bottom: 5px; }
+
+.channel-card-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px; }
+
+.channel-informations-user {
+  margin-top: 0; }
+
+.channel-picture-container {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+
+.channel-chat {
+  display: flex;
+  margin-top: 40px;
+  max-width: 350px;
+  height: 350px;
+  background-color: white;
+  align-items: flex-end; }
+
+.channel-chat-sending {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0; }
+
+.channel-chat-sending input {
+  width: 80%; }
+
+.button-channel-chat {
+  color: black; }
+
+.channel-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 450px; }
+
+.button-channel-options {
+  color: var(--blue);
+  font-size: 1.8rem;
+  padding: 5px; }
+
+.button-channel-options:hover {
+  border-bottom: var(--blue) 2px solid; }
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (min-width: 768px) {
+  .channel-user-container-one {
+    display: grid;
+    grid-template-areas: "channel-titles channel-titles" "channel-card-user channel-card-user" "channel-picture channel-chat";
+    grid-gap: 50px; }
+
+  .channel-titles {
+    grid-area: channel-titles; }
+
+  .channel-card-user {
+    grid-area: channel-card-user;
+    margin: 0; }
+
+  .channel-picture-container {
+    grid-area: channel-picture; }
+
+  .channel-chat {
+    grid-area: channel-chat;
+    margin-top: 0; } }
+@media (min-width: 1024px) {
+  .channel-picture-container img {
     max-width: 770px;
     width: 770px;
     height: 485px; }
