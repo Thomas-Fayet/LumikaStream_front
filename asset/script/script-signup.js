@@ -24,7 +24,6 @@ submitForm.addEventListener('submit', (e) => {
         password: password.value
     }
 
-    console.log(data);
     var body = JSON.stringify(data)
     var headers = { 'Content-Type': 'application/json; charset=UTF-8'};
 
