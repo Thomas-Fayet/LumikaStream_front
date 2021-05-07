@@ -13,7 +13,7 @@ if (localStorage.getItem("token") && localStorage.getItem("userId")) {
 
     let newButton = divParent.appendChild(profilButton);
     newButton.textContent = 'Profil';
-    newButton.href = "http://localhost:3000/user.html";
+    newButton.href = "https://lumikastream.netlify.app/user.html";
 }
 
 

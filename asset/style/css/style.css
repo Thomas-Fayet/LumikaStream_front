@@ -288,14 +288,14 @@ button:hover {
   text-align: center; }
 
 .channel-card {
-  margin-top: 40px; }
+  margin-top: 40px;
+  cursor:pointer; }
 
 .channel-picture {
   background-color: white;
   border: 2px solid var(--blue);
   width: 100%;
-  max-width: 350px;
-  height: 250px; }
+  max-width: 350px; }
 
 .channel-informations {
   margin-top: 15px;
