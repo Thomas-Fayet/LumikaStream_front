@@ -121,7 +121,7 @@ stream.addEventListener('click', () => {
 
 // ---------------------------------------------- GESTION DU CHAT --------------------------------------
 
-inputField.addEventListener('focusin', () => {
+if (!window.closed) {
     var socket = io('http://localhost:3000');
     var messageForm = document.querySelector(".message_form");
     var messageBox = document.querySelector(".messages__history");
@@ -142,27 +142,16 @@ inputField.addEventListener('focusin', () => {
             return;
         }
 
-        const userBox = `
+        var userBox = `
         <div class="chat_ib ${userName}-userlist">
-        <h5>${userName}</h5>
+            <h5>${userName}</h5>
         </div>
-    `;
+        `;
+
         inboxPeople.innerHTML += userBox;
     };
 
-    // new user is created so we generate nickname and emit event
-    newUserConnected();
-
-    socket.on("new user", function (data) {
-        data.map((user) => addToUsersBox(user));
-    });
-
-    socket.on("user disconnected", function (userName) {
-        document.querySelector(`.${userName}-userlist`).remove();
-    });
-
     //new message
-
     var addNewMessage = ({ user, message }) => {
         var time = new Date();
         var formattedTime = time.toLocaleString("en-US", { hour: "numeric", minute: "numeric" });
@@ -200,7 +189,7 @@ inputField.addEventListener('focusin', () => {
     socket.on("new user", function (data) {
         data.map((user) => addToUsersBox(user));
     });
-    
+
     socket.on("user disconnected", function (userName) {
         document.querySelector(`.${userName}-userlist`).remove();
     });
@@ -208,4 +197,4 @@ inputField.addEventListener('focusin', () => {
     socket.on("chat message", function (data) {
         addNewMessage({ user: data.nick, message: data.message });
     });
-});
+}
