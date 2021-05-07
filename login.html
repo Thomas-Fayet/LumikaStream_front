@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="asset/style/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="stylesheets/style-general.css" rel="stylesheet" />
     <title>Lumikastream</title>
   </head>
 
@@ -44,9 +44,9 @@
 
           <nav id="nav-burger" class="nav-burger">
               <div class="nav-link-icon">
-                <a class="nav-link" href="login.html">Se connecter</a>
-                <a class="nav-link" href="inscription.html">S'inscrire</a>
-              </div>
+          
+              <a class="nav-link" href="login.html">Se connecter</a>
+              <a class="nav-link" href="inscription.html">S'inscrire</a>
           </nav>
       </div>
       
@@ -57,7 +57,7 @@
           </li>
 
           <li class="nav-site-links">
-            <a href="channels.html"> <svg class="icon icon-nav icon-video-camera"><use xlink:href="#icon-video-camera"></use></svg> Channels</a>
+            <a href="channel.html"> <svg class="icon icon-nav icon-video-camera"><use xlink:href="#icon-video-camera"></use></svg> Channels</a>
           </li>
 
           <li class="nav-site-inscription">
@@ -71,7 +71,7 @@
     <main class="main-wrapper-site main-wrapper-form">
       <section class="form-container">
         <h2 class="form-title">CONNEXION</h2>
-        <form action="login" method="post">
+        <form id="submitFormLogin" action="" method="POST">
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email">
             <label for="password">Mot de passe</label>
@@ -80,6 +80,6 @@
         </form>
       </section>
     </main>
-    <script src="asset/script/script.js"></script>
+    <script src="./javascripts/script-login.js"></script>
   </body>
 </html>
