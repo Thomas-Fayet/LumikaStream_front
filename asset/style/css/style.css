@@ -288,7 +288,8 @@ button:hover {
   text-align: center; }
 
 .channel-card {
-  margin-top: 40px; }
+  margin-top: 40px;
+  cursor:pointer; }
 
 .channel-picture {
   background-color: white;
