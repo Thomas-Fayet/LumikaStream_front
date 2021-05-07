@@ -39,7 +39,7 @@ submitForm.addEventListener('submit', (e) => {
         .then(response => response.json())
         .then(response => {
             if (response.message){
-                document.location.href = "/user.html";
+                document.location.href = "./user.html";
             } else {
                 window.alert('Le profil existe déjà');
             }      
