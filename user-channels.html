@@ -47,7 +47,12 @@
               <a class="nav-link" href="inscription.html">Se connecter</a>
               <a class="nav-link" href="login.html">S'inscrire</a>
             </div>
+
+              <div class="burger-favorites-channel-container">
+                <h2><svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>Vos châines favorites</h2>
+              </div>
           </nav>
+
       </div>
       
       <nav class="nav-site">
@@ -61,30 +66,78 @@
           </li>
 
           <li class="nav-site-inscription">
-            <a class="user-button login-button" href="login.html">Se connecter</a>
-            <a class="user-button register-button" href="inscription.html">S'inscrire</a>
+            <a class="user-button login-button" href="login.html">Mon profil</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="main-wrapper-site main-wrapper-user">
-      <section class="form-container user-container profil-user-container">
-        <div class="user-titles">
-          <h2>Mon profil</h2>
-          <h2><a href="user-channels.html">Mes Chaînes</a></h2>
+    <main class="main-wrapper-site main-wrapper-index">
+      <section class="favorites-channel-container">
+        <h2><svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>Vos châines favorites</h2>
+      </section>
+
+      <section class="channel-container recent-channel-container">
+        <div class="channel-container-title">
+          <h2>Toutes les chaînes</h2>
         </div>
 
-        <form action="" method="post">
-            <label for="pseudo">Pseudo</label>
-            <input type="text" name="pseudo" id="pseudo">
-            <label for="profil-picture">Ma photo de profil</label>
-            <div id="profil-picture-container" class="profil-picture-container">
-              <img id="preview-image" class="preview-image" src="" alt="">
-              <input type="file" name="profil-picture" id="profil-picture-btn" >
+        <div class="channel-card-container">
+          <div class="channel-card">
+            <img src="" alt="" class="channel-picture" />
+            <div class="channel-informations">
+  
+              <ul class="channel-names">
+                <li class="channel-name">Nom du stream</li>
+                <li class="channel-user-name">Nom de l'utilisateur</li>
+              </ul>
             </div>
-            <input class="form-submit-button" type="submit" value="Enregistrer les modifications" name="envoyer">
-        </form>
+          </div>
+  
+          <div class="channel-card">
+            <img src="" alt="" class="channel-picture" />
+            <div class="channel-informations">
+  
+              <ul class="channel-names">
+                <li class="channel-name">Nom du stream</li>
+                <li class="channel-user-name">Nom de l'utilisateur</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="channel-card">
+            <img src="" alt="" class="channel-picture" />
+  
+            <div class="channel-informations">
+              <ul class="channel-names">
+                <li class="channel-name">Nom du stream</li>
+                <li class="channel-user-name">Nom de l'utilisateur</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="channel-card">
+            <img src="" alt="" class="channel-picture" />
+  
+            <div class="channel-informations">
+              <ul class="channel-names">
+                <li class="channel-name">Nom du stream</li>
+                <li class="channel-user-name">Nom de l'utilisateur</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="channel-card">
+            <img src="" alt="" class="channel-picture" />
+  
+            <div class="channel-informations">
+              <ul class="channel-names">
+                <li class="channel-name">Nom du stream</li>
+                <li class="channel-user-name">Nom de l'utilisateur</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <script src="asset/script/script.js"></script>

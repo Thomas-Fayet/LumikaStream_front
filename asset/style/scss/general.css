@@ -502,7 +502,20 @@ button:hover {
 
   .channel-chat {
     grid-area: channel-chat;
-    margin-top: 0; } }
+    margin-top: 0; }
+
+  .received__message .user-chat {
+    color: #21B4DC;
+    font-weight: bold;
+    margin-right: 2px; }
+
+  .sent__message .user-chat {
+    background-color: #FF20AB;
+    padding: 3px 4px;
+    border-radius: 10px;
+    margin-right: 2px;
+    color: white;
+    font-weight: bold; } }
 @media (min-width: 1024px) {
   .channel-picture-container {
     max-width: 770px;
@@ -512,4 +525,4 @@ button:hover {
   .channel-chat {
     height: 485px; } }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=general.css.map */

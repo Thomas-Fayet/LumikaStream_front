@@ -44,8 +44,7 @@
 
           <nav id="nav-burger" class="nav-burger">
             <div class="nav-link-icon">
-              <a class="nav-link" href="inscription.html">Se connecter</a>
-              <a class="nav-link" href="login.html">S'inscrire</a>
+                <a class="nav-link" href="inscription.html">Mon profil</a>
             </div>
           </nav>
       </div>
@@ -61,29 +60,19 @@
           </li>
 
           <li class="nav-site-inscription">
-            <a class="user-button login-button" href="login.html">Se connecter</a>
-            <a class="user-button register-button" href="inscription.html">S'inscrire</a>
+            <a class="user-button login-button" href="login.html">Mon profil</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="main-wrapper-site main-wrapper-user">
-      <section class="form-container user-container profil-user-container">
-        <div class="user-titles">
-          <h2>Mon profil</h2>
-          <h2><a href="user-channels.html">Mes Chaînes</a></h2>
-        </div>
-
-        <form action="" method="post">
-            <label for="pseudo">Pseudo</label>
-            <input type="text" name="pseudo" id="pseudo">
-            <label for="profil-picture">Ma photo de profil</label>
-            <div id="profil-picture-container" class="profil-picture-container">
-              <img id="preview-image" class="preview-image" src="" alt="">
-              <input type="file" name="profil-picture" id="profil-picture-btn" >
-            </div>
-            <input class="form-submit-button" type="submit" value="Enregistrer les modifications" name="envoyer">
+    <main class="main-wrapper-site main-wrapper-form">
+      <section class="form-container">
+        <h2 class="form-title">CREER UNE CHAINE</h2>
+        <form action="login" method="post">
+            <label for="name">Nom</label>
+            <input type="text" name="name" id="name">
+            <input class="form-submit-button" type="submit" value="Envoyer" name="envoyer">
         </form>
       </section>
     </main>
