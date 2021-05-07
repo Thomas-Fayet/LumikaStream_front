@@ -1,3 +1,7 @@
+.channel-user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .channel-titles {
   display: flex; }
@@ -82,7 +86,7 @@
     grid-area: channel-chat;
     margin-top: 0; } }
 @media (min-width: 1024px) {
-  .channel-picture-container {
+  .channel-picture-container img {
     max-width: 770px;
     width: 770px;
     height: 485px; }
@@ -90,4 +94,4 @@
   .channel-chat {
     height: 485px; } }
 
-/*# sourceMappingURL=channel.css.map */
+/*# sourceMappingURL=user-channel.css.map */

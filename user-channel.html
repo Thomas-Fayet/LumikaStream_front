@@ -43,10 +43,10 @@
           <label id="menu-icon" class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
           <nav id="nav-burger" class="nav-burger">
-            <div class="nav-link-icon">
-              <a class="nav-link" href="inscription.html">Se connecter</a>
-              <a class="nav-link" href="login.html">S'inscrire</a>
-            </div>
+              <div class="nav-link-icon">
+          
+              <a class="nav-link" href="login.html">Se connecter</a>
+              <a class="nav-link" href="inscription.html">S'inscrire</a>
           </nav>
       </div>
       
@@ -57,7 +57,7 @@
           </li>
 
           <li class="nav-site-links">
-            <a href="channels.html"> <svg class="icon icon-nav icon-video-camera"><use xlink:href="#icon-video-camera"></use></svg> Channels</a>
+            <a href="channel.html"> <svg class="icon icon-nav icon-video-camera"><use xlink:href="#icon-video-camera"></use></svg> Channels</a>
           </li>
 
           <li class="nav-site-inscription">
@@ -68,24 +68,43 @@
       </nav>
     </header>
 
-    <main class="main-wrapper-site main-wrapper-user">
-      <section class="form-container user-container profil-user-container">
-        <div class="user-titles">
-          <h2>Mon profil</h2>
-          <h2><a href="user-channel.html">Ma Chaîne</a></h2>
-        </div>
+    <main class="main-wrapper-site main-wrapper-channel">
+      <section class="user-container channel-user-container">
+          <div class="channel-user-container-one">
+              <div class="channel-titles">
+                  <h2><a href="user.html">Mon Profil</a></h2>
+                  <h2>Ma Chaîne</h2>
+                </div>
+              
+              <div class="channel-card channel-card-user">
+                <img id="user-image" class="preview-image" src="" alt="">
+      
+                <div class="channel-informations channel-informations-user">
+                  <ul class="channel-names">
+                    <li class="channel-name">Nom du stream</li>
+                    <li class="channel-user-name">Nom de l'utilisateur</li>
+                  </ul>
+                </div>
+              </div>
+      
+              <div class="channel-picture-container">
+                  <img src="" alt="" class="channel-picture" />
+              </div>
+              
+      
+              <div class="channel-chat">
+                <div class="channel-chat-sending">
+                  <input type="text" name="sending-message" id="sending-message" placeholder="Envoyer un message...">
+                  <button class="button-channel-chat" type="submit">--></button>
+                </div>
+              </div>
+          </div>
 
-        <form action="" method="post">
-            <label for="pseudo">Pseudo</label>
-            <input type="text" name="pseudo" id="pseudo">
-            <label for="profil-picture">Ma photo de profil</label>
-            <div id="profil-picture-container" class="profil-picture-container">
-              <img id="preview-image" class="preview-image" src="" alt="">
-              <input type="file" name="profil-picture" id="profil-picture-btn" >
-            </div>
-            <input class="form-submit-button" type="submit" value="Enregistrer les modifications" name="envoyer">
-        </form>
-        <div class="rounded-corners-gradient-borders"></div>
+        <div class="channel-options">
+          <button class="button-channel-options" type="button">About</button>
+          <button class="button-channel-options" type="button">Setup</button>
+          <button class="button-channel-options" type="button">Mes réseaux</button>
+        </div>
       </section>
     </main>
     <script src="asset/script/script.js"></script>

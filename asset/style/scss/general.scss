@@ -94,6 +94,10 @@ button:hover {
 
 @import "index";
 
+/*-------------------------------- PAGE CHANNEL --------------------------------*/
+
+@import "channel";
+
 /*-------------------------------- PAGE INSCRIPTION / LOGIN --------------------------------*/
 
 @import "form";
@@ -102,6 +106,7 @@ button:hover {
 
 @import "user";
 
-/*-------------------------------- PAGE CHANNEL --------------------------------*/
+/*-------------------------------- PAGE USER-CHANNEL --------------------------------*/
 
 @import "stream";
+@import "user-channel";
