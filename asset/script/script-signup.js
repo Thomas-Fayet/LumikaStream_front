@@ -11,7 +11,7 @@ submitForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     let userName = document.getElementById('userName');
-    let familyName = document.getElementById('name');
+    let familyName = document.getElementById('familyName');
     let firstName = document.getElementById('firstName');
     let email = document.getElementById('email');
     let password = document.getElementById('password');
