@@ -35,6 +35,8 @@
 
           <symbol id="icon-play" viewBox="0 0 32 32">
             <path fill="#21b4dc" style="fill: var(--color1, #21b4dc)" d="M29.584 14.605l-25.6-14.4c-0.496-0.278-1.101-0.272-1.59 0.013-0.493 0.288-0.794 0.813-0.794 1.382v28.8c0 0.57 0.301 1.094 0.794 1.382 0.25 0.144 0.528 0.218 0.806 0.218 0.269 0 0.541-0.067 0.784-0.205l25.6-14.4c0.502-0.285 0.816-0.816 0.816-1.395s-0.314-1.11-0.816-1.395z"></path>
+          <symbol id="icon-arrow-down2" viewBox="0 0 32 32">
+            <path d="M27.414 19.414l-10 10c-0.781 0.781-2.047 0.781-2.828 0l-10-10c-0.781-0.781-0.781-2.047 0-2.828s2.047-0.781 2.828 0l6.586 6.586v-19.172c0-1.105 0.895-2 2-2s2 0.895 2 2v19.172l6.586-6.586c0.39-0.39 0.902-0.586 1.414-0.586s1.024 0.195 1.414 0.586c0.781 0.781 0.781 2.047 0 2.828z"></path>
           </symbol>
         </defs>
       </svg>
@@ -93,9 +95,9 @@
               </div>
 
               <div class="channel-chat">
-                <div class="inbox">
+                <div id="inbox-container" class="inbox">
                   <div class="inbox__people">
-                    <h4>Active users</h4>
+                    <h4 id="inbox__people">Active users <svg id="icon-arrow" class="icon icon-arrow-down2"><use xlink:href="#icon-arrow-down2"></use></svg></h4>
                   </div>
                   <div class="inbox__messages">
                     <div class="messages__history"></div>
@@ -122,6 +124,7 @@
     <script src="./javascripts/main.js"></script> 
     <script src="https://cdn.bootcss.com/flv.js/1.5.0/flv.min.js"></script>
     <script src="asset/script/script.js"></script>
+    <script src="asset/script/script-copy.js"></script>
     <script src="./javascripts/redirection.js"></script>
     <script src="javascripts/isConnected-script.js"></script>
   </body>

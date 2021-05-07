@@ -571,7 +571,12 @@ input[type=file] {
 
 .channel-chat .inbox {
   grid-area: messages;
-  align-self: flex-start;}
+  align-self: flex-start;
+  height: 100%;}
+
+#inbox-container {
+  overflow-y: scroll;
+}
 
 .channel-chat .message_form {
   justify-self: center;}
@@ -580,10 +585,44 @@ input[type=file] {
   font-family: "Raleway", sans-serif;
   font-size: 1.rem;
   margin: 5px 0;
-  height: 20px;}
+  height: 20px;
+  margin: 5px 10px;}
 
-  .channel-chat .message_form__button {
-    color: var(--pink);}
+.channel-chat .message_form__button {
+  color: var(--pink);
+  margin: 0 10px;}
+
+.inbox__people, .messages__history {
+  margin: 0 10px;
+}
+
+#inbox__people {
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  user-select: none;
+  color: var(--blue);
+  display: flex;
+  align-items: center;}
+
+#inbox__people:hover {
+  cursor: pointer;
+  color: var(--pink);}
+
+#inbox__people:hover > #icon-arrow {
+  fill: var(--pink);}
+
+#icon-arrow {
+  fill: var(--blue);
+  height: 1.5rem;}
+
+.chat_ib {
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;}
+
+.sent__message p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;}
 
 .channel-chat-sending {
   display: flex;
