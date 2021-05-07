@@ -1,9 +1,6 @@
 .user-titles {
   display: flex; }
 
-.user-titles h2:first-child {
-  margin-right: 40px; }
-
 .user-titles a {
   color: var(--blue); }
 
